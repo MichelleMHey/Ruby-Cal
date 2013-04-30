@@ -46,9 +46,26 @@ class Calendar
     (h + 6) % 7
   end
 
-  def to_s
-    out = month_head+ "\n"  
-    out += WEEKDAY+ "\n" 
+  def to_s 
+    out = month_head + "\n"  
+    out += WEEKDAY + "\n" 
+    out = (" ").times(start_day_of_month * 3)
+    current_cell = start_day_of_month
+    num_of_days do |i|
+      if i < 10
+        out += " " + i.to_s
+      else
+        out += i.to_s
+      end
+      current_cell += 1
+      current_cell = current_cell % 7
+      if current_cell == 0
+        out += "\n"
+      else
+        out += " "
+      end
+    end
+    out
   end
 
   def num_of_days
