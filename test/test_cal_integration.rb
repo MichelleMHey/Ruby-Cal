@@ -7,7 +7,6 @@ class TestCal < Test::Unit::TestCase
     (1..12).each do |i|
     header = `cal #{i} 2013`.split(/\n/).first.strip!
     assert_equal(header, Calendar.new(i, 2013).month_head)
-
     end
     (1..12).each do |i|
     header = `cal #{i} 2014`.split(/\n/).first.strip!
@@ -44,7 +43,7 @@ class TestCal < Test::Unit::TestCase
   end
 
   def test_04c_get_first_of_month
-     assert_equal(4, Calendar.new(1, 1800).start_day_of_month)
+     assert_equal(1, Calendar.new(1, 1800).start_day_of_month)
   end
 
   def test_04d_get_first_of_month
@@ -70,6 +69,12 @@ class TestCal < Test::Unit::TestCase
 
   def test_05d_number_of_days
     assert_equal(29, Calendar.new(2, 2016).num_of_days)
+  end
+
+  def test_06_calendar
+    year = Calendar.new(2, 2016)
+    year_display = year.to_string 
+    assert_equal(`cal 2 2016`, year_display)
   end
 
 end
