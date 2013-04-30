@@ -9,9 +9,8 @@ class Calendar
   attr_reader :year
 
   def initialize(month, year)
-    raise ArgumentException, 'Invalid month.' unless month.between?(1..12)
-    raise ArgumentException, 'Unsupported year.' unless year.between?(1800..3000)
-      
+    raise ArgumentException, 'Invalid month.' unless month.between?(1,12) 
+    raise ArgumentException, 'Unsupported year.' unless year.between?(1800,3000)
     @month = month
     @year = year
   end
@@ -21,15 +20,15 @@ class Calendar
   end
 
   def is_leap_year?
- 	  if @year % 400 == 0
- 	    true
- 	  elsif @year % 100 == 0
- 	    false
- 	  elsif @year % 4 == 0
- 	    true
- 	  else
- 	    false
- 	  end
+    if @year % 400 == 0
+      true
+    elsif @year % 100 == 0
+      false
+    elsif @year % 4 == 0
+      true
+    else
+      false
+    end
   end
 
   def start_day_of_month
