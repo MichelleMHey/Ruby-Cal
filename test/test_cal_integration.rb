@@ -56,7 +56,7 @@ class TestCal < Test::Unit::TestCase
     assert_equal(30, Calendar.new(i, 2013).num_of_days)
     end
   end
- 
+
   def test_05b_number_of_days
     thirty_one = [1, 3, 5, 7, 8, 10, 12]
     thirty_one.each do |i|
@@ -74,7 +74,7 @@ class TestCal < Test::Unit::TestCase
 
   def test_06_calendar
     year = Calendar.new(1, 2013)
-    year_display = year.to_string 
+    year_display = year.make_calendar 
     assert_equal(`cal 1 2013`.strip!, year_display.strip!)
   end
 
