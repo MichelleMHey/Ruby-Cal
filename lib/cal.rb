@@ -49,9 +49,9 @@ class Calendar
   def to_string 
     out = month_head + "\n"  
     out += WEEKDAY + "\n"
-    out = (" ").times(num_of_days * 3)
-    current_cell = num_of_days
-    num_of_days do |i|
+    out += (" " * 3 * start_day_of_month) 
+    current_cell = start_day_of_month
+    num_of_days.times do |i|
       if i < 10
         out += " " + i.to_s
       else
@@ -81,3 +81,5 @@ class Calendar
   end
 
 end
+
+puts Calendar.new(2, 2016).to_string
