@@ -84,5 +84,8 @@ class Calendar
 
 end
 
+# Displays actual calendar
+print_cal = Calendar.new(2, 2013)
+puts print_cal.to_string
 
 
