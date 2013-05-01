@@ -22,9 +22,9 @@ test_cal_integration.rb
 
 METHODS:
 
-1. Month Header
-2. Days of Week
-3. Leap Year
-4. First of Month
-5. Number of Days in Month
-6. Display Calendar
+1. initialize
+2. month_head
+3. is_leap_year?
+4. start_day_of_month
+5. to_string
+6. num_of_days
