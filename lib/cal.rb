@@ -1,4 +1,5 @@
 include Math
+
 month = ARGV[0]
 year = ARGV[1]
 
@@ -48,7 +49,7 @@ class Calendar
     (h + 6) % 7
   end
 
-  def to_string 
+  def make_calendar 
     out = month_head + "\n"  
     out += WEEKDAY + "\n"
     out += (" " * 3 * start_day_of_month) 
@@ -78,7 +79,7 @@ class Calendar
     elsif [1, 3, 5, 7, 8, 10, 12].include?(@month)
       return 31
     elsif @month == 2 && is_leap_year?
-      return ddfd
+      return 29
     else
       return 28
     end
