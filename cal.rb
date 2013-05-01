@@ -71,7 +71,7 @@ class Calendar
       end
     end
     out
-  end
+  end 
 
   def num_of_days
     if [4, 6, 9, 11].include?(@month)
