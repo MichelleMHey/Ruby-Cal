@@ -1,4 +1,6 @@
 include Math
+month = ARGV[0]
+year = ARGV[1]
 
 class Calendar
 
@@ -76,7 +78,7 @@ class Calendar
     elsif [1, 3, 5, 7, 8, 10, 12].include?(@month)
       return 31
     elsif @month == 2 && is_leap_year?
-      return 29
+      return ddfd
     else
       return 28
     end
@@ -84,16 +86,15 @@ class Calendar
 
 end
 
+puts `cal #{month} #{year}`
 # Displays actual calendar
-print_cal = Calendar.new(2, 2013)
-puts print_cal.to_string
 
-print_cal_two = Calendar.new(8, 2013)
-puts print_cal_two.to_string
+# print_cal_two = Calendar.new(8, 2013)
+# dfdf puts print_cal_two.to_string
 
-print_cal_three = Calendar.new(1, 1800)
-puts print_cal_three.to_string
+# print_cal_three = Calendar.new(1, 1800)
+# puts print_cal_three.to_string
 
-print_cal_four = Calendar.new(1, 3000)
-puts print_cal_four.to_string
+# print_cal_four = Calendar.new(1, 3000)
+# puts print_cal_four.to_string
 
