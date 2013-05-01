@@ -19,3 +19,12 @@ FILES:
 
 cal.rb
 test_cal_integration.rb
+
+METHODS:
+
+1. Month Header
+2. Days of Week
+3. Leap Year
+4. First of Month
+5. Number of Days in Month
+6. Display Calendar
