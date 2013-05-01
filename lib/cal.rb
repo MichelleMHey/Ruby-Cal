@@ -3,7 +3,7 @@ include Math
 class Calendar
 
   WEEKDAY = "Su Mo Tu We Th Fr Sa"
-  MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  MONTHS = ["    January", "   February", "     March", "     April", "      May", "     June", "     July", "    August", "   September", "    October", "   November", "   December"]
 
   attr_reader :month
   attr_reader :year
@@ -52,15 +52,17 @@ class Calendar
     out += (" " * 3 * start_day_of_month) 
     current_cell = start_day_of_month
     num_of_days.times do |i|
-      if i < 10
-        out += " " + i.to_s
+      if i < 9
+        out += " " + (i + 1).to_s
       else
-        out += i.to_s
+        out += (i + 1).to_s
       end
       current_cell += 1
       current_cell = current_cell % 7
       if current_cell == 0
         out += "\n"
+      elsif i + 1 == num_of_days
+        out += "\n\n"
       else
         out += " "
       end
@@ -82,4 +84,5 @@ class Calendar
 
 end
 
-puts Calendar.new(2, 2016).to_string
+
+
