@@ -88,4 +88,12 @@ end
 print_cal = Calendar.new(2, 2013)
 puts print_cal.to_string
 
+print_cal_two = Calendar.new(8, 2013)
+puts print_cal_two.to_string
+
+print_cal_three = Calendar.new(1, 1800)
+puts print_cal_three.to_string
+
+print_cal_four = Calendar.new(1, 3000)
+puts print_cal_four.to_string
 
