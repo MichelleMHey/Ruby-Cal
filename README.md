@@ -8,7 +8,7 @@ The calendar only works between the years 1800-3000.
   
 INSTRUCTIONS:
 
-type in:
+type in: 
 
 ruby cal.rb 2 2013
 

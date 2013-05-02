@@ -4,7 +4,7 @@ require 'cal'
 class TestCal < Test::Unit::TestCase
 
   def test_01_header_month_year
-    (1..12).each do |i|
+    (1..12).each do |i|  
     header = `cal #{i} 2013`.split(/\n/).first
     assert_equal(header, Calendar.new(i, 2013).month_head)
     end
