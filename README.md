@@ -1,7 +1,7 @@
 Ruby-Cal
 
 Project from Nashville Software School
-
+ 
 GOAL: The Ruby Calculator project creates a Ruby program that is similar to the Unix Cal command. 
 
 The calendar only works between the years 1800-3000.

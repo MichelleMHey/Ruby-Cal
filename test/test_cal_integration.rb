@@ -48,7 +48,7 @@ class TestCal < Test::Unit::TestCase
 
   def test_04d_get_first_of_month
      assert_equal(1, Calendar.new(12, 3000).start_day_of_month)
-  end
+  end 
 
   def test_05a_number_of_days
     thirty = [4, 6, 9, 11]

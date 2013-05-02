@@ -1,6 +1,6 @@
 # require 'test/unit'
 
-# class TestCal < Test::Unit::TestCase 
+# class TestCal < Test::Unit::TestCase  
 
 #   def test_01_header_month_year
 #     assert_equal(`cal 3 2013`, `ruby cal.rb 3 2013`)
