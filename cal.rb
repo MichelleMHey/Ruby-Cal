@@ -49,7 +49,7 @@ class Calendar
     (h + 6) % 7
   end
 
-  def make_calendar 
+  def make_calendar  
     out = month_head + "\n"  
     out += WEEKDAY + "\n"
     out += (" " * 3 * start_day_of_month) 
