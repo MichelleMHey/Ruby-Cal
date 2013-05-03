@@ -1,5 +1,3 @@
- include Math
-
  class Calendar
 
   WEEKDAY = "Su Mo Tu We Th Fr Sa"
@@ -29,7 +27,8 @@
     else
       false
     end
-  endR
+  end
+
   def start_day_of_month
     q = 1
     m = @month
@@ -80,6 +79,7 @@
       return 28
     end
   end
+
 end
 
 month = ARGV[0]
