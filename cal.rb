@@ -1,12 +1,10 @@
- # include Math
- 
-class Calendar
+ class Calendar
 
   WEEKDAY = "Su Mo Tu We Th Fr Sa"
   MONTHS = ["    January", "   February", "     March", "     April", "      May", "     June", "     July", "    August", "   September", "    October", "   November", "   December"]
 
   attr_reader :month 
-  attr_reader :year
+  attr_reader :year  
 
   def initialize(month, year)
     raise ArgumentError, 'Invalid month.' unless month.to_i.between?(1,12) 
