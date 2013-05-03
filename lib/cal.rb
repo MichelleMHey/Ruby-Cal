@@ -1,8 +1,3 @@
-include Math
-
-month = ARGV[0]
-year = ARGV[1]
-
 class Calendar
 
   WEEKDAY = "Su Mo Tu We Th Fr Sa"
@@ -14,8 +9,8 @@ class Calendar
   def initialize(month, year)
     raise ArgumentException, 'Invalid month.' unless month.between?(1,12) 
     raise ArgumentException, 'Unsupported year.' unless year.between?(1800,3000)
-    @month = month
-    @year = year
+    @month = month.to_i
+    @year = year.to_i
   end
 
   def month_head
@@ -87,4 +82,7 @@ class Calendar
 
 end
 
-puts `cal #{month} #{year}`
+month = ARGV[0]
+year = ARGV[1]
+
+puts Calendar.new(month, year).make_calendar
