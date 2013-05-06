@@ -8,6 +8,9 @@ class TestCal < Test::Unit::TestCase
     header = `cal #{i} 2013`.split(/\n/).first
     assert_equal(header, Calendar.new(i, 2013).month_head)
     end
+  end
+  
+  def test_01a_header_month_year
     (1..12).each do |i|
     header = `cal #{i} 2014`.split(/\n/).first
     assert_equal(header, Calendar.new(i, 2014).month_head)
