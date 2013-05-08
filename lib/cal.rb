@@ -96,7 +96,7 @@ def make_year(year)
     right_split = month_cal[(3*row)+2].split("\n")
       puts right_split
     left_split.size.times do |i|
-      out += left_split[i].to_s + "  " + middle_split[i].to_s + "  " + right_split[i].to_s 
+      out = left_split[i].to_s + "  " + middle_split[i].to_s + "  " + right_split[i].to_s 
     end
     output += "\n\n"
   end
